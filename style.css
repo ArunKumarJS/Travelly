@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: poppins;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+
+h2{
+    font-size: 4.5rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.5rem;
+}
+h5{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.6rem;
+}
+li, button, input, label{
+    font-size: 2rem;
+}
+
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* nav Section */
+
+.head{
+    background-color: rgb(15, 12, 61);
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: sticky;
+}
+
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    min-height: 10vh;
+    align-items: center;
+    /* justify-content: center; */
+    /* text-align: center; */
+    color: white;
+    flex-wrap: wrap;
+  
+}
+
+nav ul{
+    /* width: 100%; */
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: flex-end;
+
+}
+#logo{
+    flex: 1 1 40rem;
+    font-family: pattaya;
+}
+ul li{
+    list-style: none;
+    padding: 0rem 2rem;
+
+}
+
+/* Hero Section */
+
+#hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("./img/landing-page.jpg");
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+}
+
+#hero h2{
+    margin: 2rem;
+    
+}
+
+#hero h3{
+    /* font-weight: 400; */
+    margin: 2rem;
+}
+
+#hero button{
+    padding: 2rem 4rem;
+    background-color: rgb(15, 10, 87);
+    font-size: 2.4rem;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5rem;
+    transition: background-color 1s ease-out;
+
+}
+
+#hero button:hover{
+    cursor: pointer;
+    background-color: rgba(42, 124, 218, 0.87);
+    padding: 2rem 6rem;
+    /* box-shadow: 2px 2px 2px rgba(14, 86, 163, 0.87); */
+}
+
+/* Location-Section */
+
+#location{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("./img/new-york-page.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.location-head {
+    /* background: yellow; */
+    width: 90%;
+    margin: auto;
+
+} 
+
+.location-head h2{
+    padding: 1rem 0rem;
+    /* font-weight: 700; */
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+}
+
+.location-head h3{
+    padding: 4rem 0rem;
+    /* background: linear-gradient(to left, rgb(10, 21, 44), rgb(34, 28, 56));
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+}
+
+.cloud{
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none; 
+}
+.moving-cloud-1{
+animation: cloudAnimation 3s infinite alternate 2s ease-in-out;
+} 
+.moving-cloud-2{
+    animation: cloudAnimation 3.5s infinite alternate 2s ease-in-out;
+    top: 20%;
+    z-index: -1;
+    opacity: 0.5;
+} 
+
+@keyframes cloudAnimation{
+from{
+    transform: translate(10%, -10%);
+}
+to{
+    transform: translate(0%, 0%)
+}
+}
+
+/* Benefits Section */
+
+.benefits-head{
+    background-color: rgb(80, 80, 82);
+    min-height: 30vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits-head h3{
+    padding: 2rem;
+}
+
+.cards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+
+    flex: 1 1 25rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.cards .card-icon{
+    background: rgb(80, 80, 82);
+
+}
+
+.cards img{
+    /* height: 100px; */
+    max-width: 15%;
+    margin: 2rem;
+    /* width: 100%;
+    padding: 2rem; */
+}
+.card h4,
+.card p{
+    padding: 3rem;
+}
+
+/* Form Section */
+
+#contact{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("./img/contact-mountain.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-wrapper{
+    background: rgba(19, 28, 39, 0.8);
+    width: 60%;
+    color: white;
+    border-radius: 2rem;
+}
+
+.form-head{
+    text-align: center;
+    padding: 2rem;
+}
+
+.name-form, .email-form{
+    text-align: center;
+    padding: 3rem;
+}
+
+.form-wrapper label{
+    margin: 0rem 3rem;
+}
+
+form button{
+    padding: 2rem 4rem;
+    background-color: rgb(56, 90, 184);
+    font-size: 2.4rem;
+    outline: none;
+    border: none;
+    color: white;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: background-color 1s ease-out;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+form button:hover{
+    cursor: pointer;
+    background-color: rgba(56, 90, 184, 0.5);
+}
+
+/* Footer Section */
+footer{
+
+    background-color: slategray;
+    color: snow;
+}
+
+.footer-wrapper{
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    min-height: 10vh;
+}
+footer h5{
+
+    flex: 1 1 40rem;
+}
+
+.footer-wrapper ul{
+    /* width: 30%; */
+    /* margin: auto; */
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 932px){
+    html{
+        font-size: 45%;
+    }
+nav{
+        text-align: center;
+    }
+    #logo{
+        padding: 1rem;
+    }
+
+    nav ul{
+        /* width: 100%; */
+        justify-content: space-around;
+    
+    }
+    .cloud{
+        height: 40rem;
+    }
+    .moving-cloud-2{
+        top: 10%;
+        z-index: -2;
+    }
+    .moving-cloud-1{
+        z-index: -1;
+    }
+    .location-head h3{
+        background: rgba(15, 12, 61, 0.8);
+        padding: 2rem;
+        -webkit-text-fill-color: white;
+    }
+}
